@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alm brand</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+
+    <style>
+        :root {
+            --lyseblaa: #00b9ea;
+            --moerkeblaa: #032846;
+            --roed: #e51147;
+            --gul: #fcd900;
+            --lyseblaa-baggrund: rgba(0, 185, 234, 0.1);
+            --almbrandlys: #ebf6fc;
+            --almbrandmid: #d5edfa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Work Sans', sans-serif;
+
+        }
+
+        html {
+            height: 100%;
+        }
+
+        /*Nav*/
+
+        .logo_container img {
+            max-width: 50px;
+            margin: 6px 0;
+            margin-left: 6px;
+        }
+        .nav_container {
+            display: flex;
+            width: 100%;
+
+        }
+        .menu {
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+
+        }
+        nav a {
+            color: var(--moerkeblaa);
+            text-decoration: none;
+            padding: 20px;
+            font-family: 'Work Sans', sans-serif;
+            cursor: pointer;
+            margin: 0 20px;
+            transition: .2s;
+        }
+        nav a:hover {
+            color: var(--lyseblaa);
+        }
+
+
+
+        /*INDHOLD*/
+
+        body {
+            min-height: 100%;
+            display: grid;
+            grid-template-rows: 1fr auto;
+        }
+
+
+
+        /*Beregner*/
+
+
+
+        .beregner {
+
+            background-color: var(--moerkeblaa);
+            max-width: 100%;
+            margin-bottom: 20px;
+            padding: 30px 0 0;
+        }
+
+
+        input {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        input[type=range] {
+            -webkit-appearance: none;
+            background: transparent;
+        }
+
+        input[type=range]:focus {
+
+            outline: none;
+
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+
+            -webkit-appearance: none;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            border: 3px solid var(--almbrandlys);
+            background: var(--lyseblaa);
+            cursor: grab;
+            margin-top: -6px;
+            box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.9);
+            position: relative;
+            top: -5px;
+
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            background: #ffffff;
+            border-radius: 6px;
+            box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.9);
+        }
+
+         .beregner_h1 {
+            color: white;
+            text-align: center;
+            font-family: Georgia, serif;
+            font-weight: 100;
+            font-size: 3.5em;
+
+        }
+
+        .dit_laan {
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-weight: 200;
+            color: var(--lyseblaa);
+        }
+
+        label {
+            color: white;
+        }
+
+        .beregner_info {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 0.9em;
+            margin: 25px 0;
+        }
+
+        .beregner_row {
+            max-width: 80%;
+            margin: 10px auto;
+        }
+
+        .beregner_row3 {
+            margin-top: 20px;
+            margin-bottom: 0;
+            padding-bottom: 17px;
+        }
+
+        .beregner_row label {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        /* SLUT */
+
+
+
+
+        .bokse {
+            display: grid;
+            grid-template-rows: 1fr auto;
+
+        }
+
+        .boks {
+            grid-row: span 1;
+            margin: 6px;
+            line-height: 1.6;
+            color: var(--moerkeblaa);
+            text-align: center;
+
+        }
+
+        .boks1 {
+            background: var(--almbrandlys);
+        }
+
+
+        .boks2 {
+            background: var(--almbrandmid);
+        }
+
+
+        .boks3 {
+            background: var(--moerkeblaa);
+            color: white;
+        }
+
+        .boks4 {
+            background: var(--almbrandlys);
+        }
+
+        .headset {
+            margin: 10px 0 0 0;
+            max-height: 40px;
+        }
+
+
+
+        .boksheader {
+            font-size: 0.9em;
+            margin: 10px auto;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .boksemne {
+            font-size: 1.7em;
+            font-family: Georgia, serif;
+        }
+
+        .boksP {
+            max-width: 470px;
+            margin: 0 auto;
+            padding: 5px 15px;
+        }
+
+
+        .liste {
+            list-style-position: outside;
+            padding: 5px 15px;
+            text-align: left;
+        }
+
+        .liste_container {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .liste li {
+            margin: 5px 0;
+        }
+
+        .divider {
+            border: none;
+            width: 60px;
+            height: 2px;
+            margin: 10px auto;
+            background: var(--lyseblaa);
+        }
+
+        .boksButton {
+            border: 2px solid var(--lyseblaa);
+            background-color: transparent;
+            color: var(--moerkeblaa);
+            border-radius: 2em;
+            height: 40px;
+            min-width: 125px;
+            padding: 0 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .4s;
+
+
+        }
+
+        .boksButton:hover {
+            background-color: #0569ba;
+        }
+
+
+        .beregner_row3 .button_container {
+            display:flex;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        .beregner_row3 button {
+            color: white;
+            margin:
+
+        }
+        .kontaktlink {
+            margin: 30px 0px;
+
+        }
+
+        .kontaktlink a {
+            color: var(--moerkeblaa);
+        }
+
+        .beloeb {
+            margin-right: 0;
+        }
+
+        .boks3 button {
+            color: #FFF;
+        }
+
+        .button_container {
+            margin: 13px 0 17px 0;
+
+        }
+
+        .pr_mdr {
+            font-family: Georgia, serif;
+            font-size: 2em;
+        }
+
+        .ialt {
+            font-family: Georgia, serif;
+            font-size: 2em;
+        }
+
+        .tlf {
+            font-family: Georgia, serif;
+            font-size: 2em;
+        }
+
+        footer img {
+            max-width: 40px;
+            margin: 30px 5px 20px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            background-color: var(--moerkeblaa);
+        }
+
+        .splash img {
+            display: none;
+        }
+
+        #modal {
+                background-color: rgba(3, 40, 70, 0.95);
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                text-align: center;
+                opacity: 0;
+                pointer-events: none;
+                transition: 1s;
+                top: 0;
+                z-index: 1;
+                color: white;
+                padding-top: 20vw;
+    }
+
+
+        #modal.vis {
+                opacity: 1;
+                pointer-events: all;
+                transition: 0.5s;
+    }
+
+
+        #modal h3 {
+
+                font-size: 1.5em;
+                text-align: left;
+            font-family: Georgia, serif;
+            font-weight: normal;
+        }
+
+        #modal .kontakt_form {
+                width: 70%;
+                margin: 0 auto;
+        }
+
+        #modal ul {
+                padding: 0;
+                margin: 0;
+        }
+
+
+        #modal li {
+                margin: 20px 0;
+                list-style-type: none;
+                width: 100%;
+        }
+
+
+        #modal input {
+                padding-bottom: 5px;
+                margin: 7px 0 10px;
+                border: none;
+                background-color: transparent;
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+                border-bottom-color: white;
+                color: white;
+                font-size: 1.1em;
+                font-family: 'Work Sans', sans-serif;
+
+
+        }
+
+
+
+        #modal button {
+                margin: 20px auto;
+                color: white;
+        }
+
+
+
+@media screen and (min-width:650px) {
+
+            .bokse {
+                grid-template-columns: 1fr 1fr;
+                max-width: 800px;
+                margin: 0 auto;
+
+            }
+
+            #indhold {
+                align-items: center;
+            }
+
+            footer img {
+                margin: 30px 10px 40px;
+            }
+            .beregner_row3 .button_container {
+
+                justify-content: flex-start;
+
+        }
+
+            #modal {
+                padding-top: 15vw;
+    }
+
+
+             #modal .kontakt_form {
+                max-width: 450px;
+        }
+
+
+}
+
+
+
+
+@media screen and (min-width:1045px) {
+
+
+
+
+                .bokse {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    max-width: 1500px;
+                }
+
+                .boks4 {
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                }
+                .beregner_row {
+                    max-width: 60%;
+                }
+                .beregner_h1 {
+                    font-size: 4.5em;
+                }
+
+                label,
+                .beregner_info {
+                    font-size: 1.5em;
+                }
+
+                .boksP {
+                    max-width: 390px;
+                }
+                .splash_container {
+                    position: relative;
+                }
+
+                .splash {
+                    position: relative;
+
+                }
+
+                .splash img {
+                    width: 100%;
+                    display: block;
+                }
+
+                .form_container {
+                    display: grid;
+                    position: absolute;
+                    width: 100%;
+                    top: 0%;
+
+                }
+
+                .beregner {
+                    margin: 0 auto;
+                    opacity: .7;
+                    width: 70%;
+                }
+
+      #modal {
+                padding-top: 13vw;
+    }
+
+
+
+}
+
+        @media screen and (min-width:1150px) {
+
+        .form_container {
+                top: 10%;
+            }
+
+            #modal input {
+
+                font-size: 1.2em;
+            }
+            #modal h3 {
+                font-size: 1.7em;
+            }
+              #modal {
+                padding-top: 10vw;
+    }
+        }
+
+        @media screen and (min-width:1400px) {
+
+            .form_container {
+                top: 20%;
+            }
+              #modal {
+                padding-top: 5vw;
+            }
+
+        }
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <section id="modal">
+
+
+        <button class="boksButton" id="close">&#10006;</button>
+
+
+        <div id="modal_content">
+            <form>
+                <ul class="kontakt_form">
+
+                    <li>
+                        <h3>Fulde navn:</h3>
+                        <input type="text" name="name" class="name" placeholder="Indtast dit fulde navn her">
+                    </li>
+                    <li>
+                        <h3>Mobil:</h3>
+                        <input type="tel" name="tel" class="tel" placeholder="Indtast dit mobilnummer her">
+                    <li>
+                        <h3>Email:</h3>
+                        <input type="email" name="email" class="email" placeholder="Indtast din email her">
+                    </li>
+
+                    <li class="modal_send">
+                        <button type="button" class="boksButton" id="modal_submit">Send</button>
+                    </li>
+                </ul>
+            </form>
+
+
+
+
+
+        </div>
+
+    </section>
+
+    <nav class="nav_container">
+
+        <div class="logo_container">
+            <img src="pics/Alm.Brand_logo_RGB_200x200px.jpg" alt="" class="logo">
+        </div>
+
+
+        <div class="menu">
+            <a href="index.html">Forside</a>
+            <a href="video.html">Videoer</a>
+        </div>
+
+
+    </nav>
+
+
+
+    <div class="splash_container">
+
+        <div class="splash">
+            <img src="pics/splash6.jpg" alt="">
+            <div class="form_container">
+                <form class="beregner">
+
+
+                    <h1 class="beregner_h1">Beregn <span class="dit_laan">dit</span> lån</h1>
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="beregner_row">
+                        <label for="laanebeloeb">Lånebeløb: <span class="beloeb"></span></label>
+                        <input type="range" id="laanebeloeb" class="beregner_beloeb" min="5000" max="100000" value="5000" step="500">
+                    </div>
+                    <div class="beregner_row">
+                        <label for="loebetid">Løbetid: <span class="tid"></span></label>
+                        <input type="range" id="loebetid" class="beregner_tid" min="6" max="60" value="6" step="1">
+                    </div>
+
+                    <div class="beregner_row beregner_row3">
+                        <h2 class="beregner_info">Pris pr. måned: <span class="result_samlet"><span class="pr_mdr"></span> kr.</span>
+                        </h2>
+                        <h2 class="beregner_info">Pris i alt: <span class="result_samlet"><span class="ialt"></span> kr.</span>
+                        </h2>
+                        <div class="button_container">
+                            <button type="button" class="boksButton" id="kontakt_mig">Kontakt mig</button>
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <main id="indhold">
+
+        <div class="bokse">
+
+
+
+            <div class="boks boks1">
+                <h1 class="boksheader">Tilmelding </h1>
+                <h2 class="boksemne">Tilmelding til Ung+</h2>
+                <div class="divider"></div>
+                <p class="boksP">
+                    Alm. brand udbyder Ung+ til alle kunder mellem 18 og 32 år. Når kunden tilmelder sig Ung+ konceptet, vil de rente- og gebyrfordele, der er forbundet med Ung+ konceptet, træde i kraft, når tilmeldingen er registreret og godkendt af Alm. Brand Bank, med mindre andet er skriftligt aftalt. Tilmeldingen sker ved at kunden underskriver Alm. Brand Banks ”Kundeaftale - Ung+”.
+                </p>
+                <div class="button_container">
+                    <button class="boksButton">Tilmeld dig her</button>
+                </div>
+            </div>
+            <div class="boks boks2">
+                <h1 class="boksheader">Vilkår</h1>
+                <h2 class="boksemne"> Ung+</h2>
+                <div class="divider"></div>
+                <div class="liste_container">
+                    <ul class="liste">
+                        <li>Ung+ til dig mellem 18-32 år.</li>
+                        <li>Udlånsrente på 7%.</li>
+                        <li>Mulighed for digital anmodning om forbrugslån på 5.000-100.000 kr.</li>
+                        <li>Gratis kreditvurdering og rådgivning over telefon inden for 1-2 hverdage.</li>
+                    </ul>
+                </div>
+                <div class="button_container">
+                    <button class="boksButton">Læs mere her</button>
+                </div>
+            </div>
+            <div class="boks boks3">
+                <h1 class="boksheader">Bank</h1>
+                <h2 class="boksemne">Hvad vil du have råd til?</h2>
+                <div class="divider"></div>
+                <p class="boksP">
+                    På en time giver vi dig overblik over din økonomi, så du kan bruge tiden på det, du elsker.
+                </p>
+                <div class="button_container">
+                    <button class="boksButton">Book et økonomitjek</button>
+                </div>
+            </div>
+
+
+            <div class="boks boks4">
+                <img src="pics/headset.svg" alt="" class="headset">
+
+                <h2 class="boksemne">Kontakt os</h2>
+                <div class="divider"></div>
+                <div class="boksP">
+                    <h2 class="tlf">35 47 47 47</h2>
+                    <br>
+                    <p class="kontakt_tekst">Vi sidder klar til at hjælpe dig og besvare dine spørgsmål.</p>
+                    <div class="kontaktlink">
+                        <a href="https://www.almbrand.dk/kundeservice/kontakt/kontakt-os/" target="_blank">Kontakt os</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="https://www.facebook.com/almbrand" target="_blank">
+                <img src="pics/facebook_logo.svg" alt="Facebook logo">
+            </a>
+        </div>
+        <div class="socials">
+            <a href="https://twitter.com/alm_brand" target="_blank">
+                <img src="pics/twitter_logo.svg" alt="Twitter logo">
+            </a>
+        </div>
+        <div class="socials">
+            <a href="https://www.linkedin.com/company/alm-brand/" target="_blank">
+                <img src="pics/linkedin_logo.svg" alt="Twitter logo">
+            </a>
+        </div>
+
+    </footer>
+
+
+
+    <script>
+        let modal = document.querySelector("#modal");
+        let PV, IR, NP, PMT;
+        let laaneBeloeb = document.querySelector(".beregner_beloeb");
+        let laaneTid = document.querySelector(".beregner_tid");
+        document.querySelector(".beloeb").textContent = laaneBeloeb.value + " kr.";
+        document.querySelector(".tid").textContent = laaneTid.value + " mdr.";
+
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+
+        function visModal() {
+            modal.classList.add("vis");
+            document.querySelector("#close").addEventListener("click", skjulModal);
+            document.querySelector("#modal_submit").addEventListener("click", skjulModal);
+            console.log("Hej");
+        }
+
+        function skjulModal() {
+            modal.classList.remove("vis");
+
+        }
+
+        function start() {
+            document.querySelector(".beregner_beloeb").addEventListener("input", calculation);
+            document.querySelector(".beregner_tid").addEventListener("input", calculation);
+            document.querySelector("#kontakt_mig").addEventListener("click", visModal);
+            console.log("Hello");
+
+        }
+
+        function calculation() {
+            let percent = 0.07;
+            let amount = laaneBeloeb.value;
+            let period = laaneTid.value;
+            let result = (amount * percent) / (1 - Math.pow(1 + percent, -period));
+
+            document.querySelector(".beloeb").textContent = laaneBeloeb.value + " kr.";
+            document.querySelector(".tid").textContent = laaneTid.value + " mdr.";
+            document.querySelector(".pr_mdr").textContent = Math.round(result);
+
+            document.querySelector(".ialt").textContent = Math.round(result) * period;
+
+
+        }
+    </script>
+
+</body>
+
+</html>
